@@ -15,7 +15,7 @@ angular.module('video-player')
       };
 
       this.$onChanges = function() {
-        youTube.search({query: 'dogs', key: YOUTUBE_API_KEY}, (videos) => {
+        youTube.search({}, (videos) => {
           this.videos = videos;
           this.currentVideo = videos[0];
         });

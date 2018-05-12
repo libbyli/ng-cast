@@ -17,3 +17,4 @@ angular.module('video-player')
       });
     }, 500, {trailing: true});
   });
+ 
