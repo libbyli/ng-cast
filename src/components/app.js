@@ -9,7 +9,6 @@ angular.module('video-player')
 
       this.searchResults = (searchText) => {
         youTube.search({query: searchText}, (videos) => {
-          console.log(videos);
           this.videos = videos;
           this.currentVideo = videos[0];
         });

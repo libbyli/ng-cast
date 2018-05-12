@@ -1,6 +1,6 @@
 angular.module('video-player')
   .service('youTube', function($http) {
-    this.search = function(options, callback) {
+    this.search = _.debounce(function(options, callback) {
       $http.get('https://www.googleapis.com/youtube/v3/search',
         {
           params: {
@@ -15,5 +15,5 @@ angular.module('video-player')
       ).then(function(response) {
         callback(response.data.items);
       });
-    };
+    }, 500, {trailing: true});
   });
