@@ -1,7 +1,6 @@
 angular.module('video-player')
   .component('videoList', {
     controller: function() {
-      this.onClick = () => {};
     },
 
     bindings: {
